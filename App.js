@@ -1,26 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import MainCalendar from './src/Components/MainCalendar';
+import Footer from './src/Components/Footer';
 export default function App() {
-  let today = new Date();
+
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Icon name='menu' style={styles.menu} size={30} />
       <View stlye={styles.main}>
-        <View style={styles.today} >
-          <Text style={styles.todayText}>{today.getDay()}</Text>
-        </View>
+        <MainCalendar />
       </View>
-      <View style={styles.navbar}>
-      <Button
-        title="Podcast"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-      />
-      </View>
+      <Footer />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
