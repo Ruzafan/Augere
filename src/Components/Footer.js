@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View, Button, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Button, Pressable, Linking } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 export default function Footer() {
 
     return (
         <View style={styles.main}>
-            <Pressable style={styles.pressable}>
+            <Pressable style={styles.pressable} >
                 <Icon name="radio-outline" size={25}></Icon>
                 <Text style={styles.text}>Podcast</Text>
             </Pressable>
-            <Pressable style={styles.pressable}>
+            <Pressable style={styles.pressable} onPress={() => Linking.openURL('https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn')}>
                 <Icon name="musical-notes-outline" size={25}></Icon>
                 <Text style={styles.text}>Lo Fi</Text>
             </Pressable>
