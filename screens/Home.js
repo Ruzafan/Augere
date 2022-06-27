@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import MainCalendar from '../src/Components/MainCalendar';
+import Footer from '../src/Components/Footer';
 
 export default function HomeScreen() {
     return (

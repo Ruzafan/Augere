@@ -15,7 +15,7 @@ import AccountScreen from './screens/Account';
 import ConfigurationScreen from './screens/Configuration';
 import RemindersScreen from './screens/Reminders';
 import StatisticsScreen from './screens/Statistics';
-
+import PsicoeducationScreen from './screens/Psicoeducation';
 
 const Drawer = createDrawerNavigator();
 
@@ -23,18 +23,19 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-       <NavigationContainer>
-      <Drawer.Navigator
-        useLegacyImplementation
-        drawerContent={(props) => <CustomDrawerContent {...props} />}
-      >
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Account" component={AccountScreen} />
-        <Drawer.Screen name="Statistics" component={StatisticsScreen} />
-        <Drawer.Screen name="Reminders" component={RemindersScreen} />
-        <Drawer.Screen name="Configuration" component={ConfigurationScreen} />
-      </Drawer.Navigator>
-    </NavigationContainer>
+      <NavigationContainer>
+        <Drawer.Navigator
+          useLegacyImplementation
+          drawerContent={(props) => <CustomDrawerContent {...props} />}
+        >
+          <Drawer.Screen name="Home" component={HomeScreen} />
+          <Drawer.Screen name="Account" component={AccountScreen} />
+          <Drawer.Screen name="Statistics" component={StatisticsScreen} />
+          <Drawer.Screen name="Reminders" component={RemindersScreen} />
+          <Drawer.Screen name="Configuration" component={ConfigurationScreen} />
+          <Drawer.Screen name="Psicoeducation" component={PsicoeducationScreen} />
+        </Drawer.Navigator>
+      </NavigationContainer>
       <Footer />
       <StatusBar style="auto" />
     </SafeAreaView>
