@@ -9,6 +9,7 @@ import AccountScreen from './screens/Account';
 import ConfigurationScreen from './screens/Configuration';
 import PsicoeducationScreen from './screens/Psicoeducation';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -17,10 +18,40 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="Home" component={HomeScreen} />
-          <Tab.Screen name="Account" component={AccountScreen} />
-          <Tab.Screen name="Psicoeducation" component={PsicoeducationScreen} />
-          <Tab.Screen name="Settings" component={ConfigurationScreen} />
+          <Tab.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="home" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Account"
+            component={AccountScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="person" color={color} size={size} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Psicoeducation"
+            component={PsicoeducationScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="book" color={color} size={size} />
+              ),
+            }} />
+          <Tab.Screen
+            name="Settings"
+            component={ConfigurationScreen}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Icon name="cog" color={color} size={size} />
+              ),
+            }} />
         </Tab.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
